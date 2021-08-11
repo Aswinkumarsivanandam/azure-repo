@@ -32,11 +32,11 @@ steps:
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+
 - task: AzureRmWebAppDeployment@4
   inputs:
     ConnectionType: 'AzureRM'
-    azureSubscription: 'Free Trial (366db4df-26cd-4e3a-a4a8-711caa0147f4)'
     appType: 'webApp'
-    WebAppName: 'Azure-github'
-    packageForLinux: 'D:\a\r1\a\_Aswinkumarsivanandam.azure-repo\drop\SampleWebApi.zip'
+    WebAppName: 
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
 - task: PublishBuildArtifacts@1
