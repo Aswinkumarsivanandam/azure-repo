@@ -1,4 +1,11 @@
 # ASP.NET
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Free Trial (366db4df-26cd-4e3a-a4a8-711caa0147f4)'
+    appType: 'webApp'
+    WebAppName: 'Azure-github'
+    packageForLinux: 'D:\a\r1\a\_Aswinkumarsivanandam.azure-repo\drop\SampleWebApi.zip'
 # Build and test ASP.NET projects.
 # Add steps that publish symbols, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/apps/aspnet/build-aspnet-4
